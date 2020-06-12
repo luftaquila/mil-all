@@ -1,0 +1,24 @@
+{
+  "name": "mil-all",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luftaquila/mil-all.git"
+  },
+  "author": "LUFT-AQUILA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luftaquila/mil-all/issues"
+  },
+  "homepage": "https://github.com/luftaquila/mil-all#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mariadb": "^2.4.0"
+  }
+}

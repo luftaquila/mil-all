@@ -1,0 +1,13 @@
+[Unit]
+Description=Mil-All Backend Server
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/luftaquila/HDD/mil-all/server
+ExecStart=/usr/local/bin/node /home/luftaquila/HDD/mil-all/server/server.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

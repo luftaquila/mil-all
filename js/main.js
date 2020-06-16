@@ -252,10 +252,6 @@
 
 	};
 
-	var bgVideo = function() {
-		$('.player').mb_YTPlayer();
-	};
-
 	
 	$(function(){
 		mobileMenuOutsideClick();
@@ -269,7 +265,6 @@
 		counter();
 		counterWayPoint();
 		owlCrouselFeatureSlide();
-		bgVideo();
 	});
 
 

@@ -65,16 +65,14 @@
 			</div>
 		</nav>
 
-		<section id="home" class="video-hero" style="height: 700px; background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+		<section id="home" class="video-hero" style="display: none; height: 500px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
 		<div class="overlay"></div>
-			<div class="display-t text-center">
+			<div class="display-t display-t2 text-center">
 				<div class="display-tc">
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
 								<h2>군생활의 모든 것 Mil-All</h2>
-								<p>설명 어쩌고저쩌고</p>
-								<p><a href="login.html" class="btn btn-primary btn-lg btn-custom">시작하기</a></p>
 							</div>
 						</div>
 					</div>
@@ -82,110 +80,56 @@
 			</div>
 		</section>
 
-		<div class="colorlib-featured">
-			<div class="row animate-box">
-				<div class="featured-wrap">
-					<div class="owl-carousel">
-						<div class="item">
-							<div class="col-md-8 col-md-offset-2">
-								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_1.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="col-md-8 col-md-offset-2">
-								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_2.jpg" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="col-md-8 col-md-offset-2">
-								<div class="featured-entry">
-									<img class="img-responsive" src="images/dashboard_full_3.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="colorlib-services colorlib-bg-white">
+		<div id="colorlib-contact">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-                <i class="fas fa-running"></i>
-              </span>
-							<div class="desc">
-								<h3>체력 관리</h3>
-								<p>그룹별, 개인별 운동량 목표를 설정하고 달성할 수 있도록 도와줍니다.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-                <i class="fas fa-utensils"></i>
-							</span>
-							<div class="desc">
-								<h3>식단 관리</h3>
-								<p>급양대별 식단과 열량 정보를 알려 줍니다. 체력 관리 기능과 연동해 칼로리 관리를 도와줍니다.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-                <i class="fas fa-book-medical"></i>
-							</span>
-							<div class="desc">
-								<h3>건강 관리</h3>
-								<p>지휘관에게 국군 부대에서 각 분기별 유행하는 주요 감염병 통계를 제공해 위협 질병에 대처할 수 있게 도와줍니다. 이 외에도 인근의 의료기관 정보를 지도상에서 한 눈에 보여줍니다.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center animate-box">
-						<div class="services">
-							<span class="icon">
-								<i class="fas fa-satellite"></i>
-							</span>
-							<div class="desc">
-								<h3>소통의 창</h3>
-								<p>그룹 구성원이 이용할 수 있는 게시판 기능을 제공합니다. 지휘관이 공지사항 기능을 통해 손쉽게 전파사항을 전달할 수 있게 도와줍니다. 어려움을 겪는 병사가 지휘관과 1:1 채팅을 할 수 있는 접근성 높은 서비스를 제공합니다.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<div class="counter-entry">
-								<span class="icon"><i class="flaticon-ribbon"></i></span>
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="143" data-speed="2000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">현재 개설된 그룹</span>
+					<div class="col-md-8 col-md-pull-4 animate-box">
+						<h2>회원가입</h2>
+						<form action="#">
+              <div style='width: 100%; text-align: center; margin-bottom: 15px'>
+                <div style="height: 30%; margin-top: 0.3rem">
+                  멤버&nbsp;&nbsp;
+                  <label class="switch">
+                    <input class="isCommander" type="checkbox" style='background-color: #2196F3!important;'>
+                    <span class="slider" style='background-color: #2196F3!important'></span>
+                  </label>
+                  &nbsp;&nbsp;지휘관
+                </div>
+              </div>
+							<div class="row form-group">
+								<div class="col-md-6">
+									<!-- <label for="fname">First Name</label> -->
+									<input type="number" id="id" class="form-control" placeholder="군번">
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 text-center animate-box">
-							<div class="counter-entry">
-								<span class="icon"><i class="flaticon-church"></i></span>
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="2593" data-speed="2000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">현재 가입한 회원</span>
+              </div>
+							<div class="row form-group">
+								<div class="col-md-6">
+									<!-- <label for="fname">First Name</label> -->
+									<input type="text" id="rank" class="form-control" placeholder="계급">
 								</div>
+              </div>
+							<div class="row form-group">
+								<div class="col-md-6">
+									<!-- <label for="fname">First Name</label> -->
+									<input type="text" id="name" class="form-control" placeholder="이름">
+								</div>
+              </div>
+							<div class="row form-group">
+								<div class="col-md-6">
+									<!-- <label for="fname">First Name</label> -->
+									<input type="password" id="pw" class="form-control" placeholder="비밀번호">
+								</div>
+              </div>
+							<div class="row form-group">
+								<div class="col-md-6">
+									<!-- <label for="fname">First Name</label> -->
+									<input type="text" id="code" class="form-control" placeholder="그룹 코드">
+								</div>
+              </div>
+							<div class="form-group">
+								<span class="btn btn-success">회원가입</span>
 							</div>
-						</div>
+						</form>		
 					</div>
 				</div>
 			</div>

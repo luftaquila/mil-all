@@ -1,0 +1,8 @@
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-19 19:46:46"}
+{"ip":"::1","url":"api/loginCheck","level":"info","message":"Login check requested.","timestamp":"2020-06-19 19:48:37"}
+{"ip":"::ffff:127.0.0.1","url":"/api/register","detail":"19-70015007","level":"info","message":"Admin registered.","timestamp":"2020-06-19 19:49:44"}
+{"ip":"::1","url":"api/loginCheck","level":"info","message":"Login check requested.","timestamp":"2020-06-19 19:49:44"}
+{"ip":"::ffff:127.0.0.1","url":"api/login","detail":"19-70015007","level":"info","message":"Login requested.","timestamp":"2020-06-19 19:49:50"}
+{"ip":"::1","url":"api/loginCheck","level":"info","message":"Login check requested.","timestamp":"2020-06-19 19:52:36"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-19 19:52:57"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-19 19:53:08"}

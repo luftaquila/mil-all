@@ -23,6 +23,7 @@
     "express-session": "^1.17.1",
     "mariadb": "^2.4.0",
     "pbkdf2-password": "^1.2.1",
-    "sha-256": "^1.0.3"
+    "sha-256": "^1.0.3",
+    "winston": "^3.2.1"
   }
 }

@@ -1,5 +1,6 @@
 const express = require('express');
 const mariadb = require('mariadb');
+const winston = require('winston');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const key = require('pbkdf2-password')();
@@ -15,6 +16,25 @@ const pool = mariadb.createPool(DBOptions);
 const sessionDB = new sessionDatabase(DBOptions);
 (async function() { db = await pool.getConnection(); })();
 
+let logger = new winston.createLogger({
+  transports: [
+    new winston.transports.File({
+      level: 'info',
+      filename: '/home/luftaquila/HDD/mil-all/server/server.log',
+      maxsize: 10485760, // 10MB
+      maxFiles: 1,
+      showLevel: true,
+      format: winston.format.combine(
+        winston.format.timestamp({
+          format: 'YYYY-MM-DD HH:mm:ss'
+        }),
+        winston.format.json()
+      )
+    })
+  ],
+  exitOnError: false,
+});
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
  secret: '@+*LU_Ft%AQuI-|!la#@$',
@@ -24,11 +44,10 @@ app.use(session({
  cookie: {expires: new Date(2147483647000)}
 }));
 
-app.post('/api/loginCheck', function(req, res) {
-  if(req.session.login) return res.send({ result: "true" });
-});
+app.post('/api/loginCheck', function(req, res) { if(req.session.login) return res.send({ result: "true" }); });
 
 app.post('/api/login', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
   let ans = req.body, msg;
   if(!ans.id) msg = "군번을 입력해 주세요";
   else if(!ans.pw) msg = "비밀번호를 입력해 주세요";
@@ -57,17 +76,29 @@ app.post('/api/login', async function(req, res) {
             req.session.rank = resp.rank;
             req.session.role = resp.role;
             req.session.code = result.code;
+            logger.info('Login requested.', { ip: ip, url: 'api/login', detail: resp.id });
             return res.send({ result: 'OK' });
           }
           else return res.send({ result: "FAILURE_NO_MEMBER_INFO_ON_GROUP_MEMBERS" });
         }
         else return res.send({ result: "군번 또는 비밀번호가 올바르지 않습니다." });
-      } catch(e) { res.send({ result: "FAILURE_WHILE_PROCESSING_LOGIN" }); }
+      } catch(e) {
+        let err = "FAILURE_WHILE_PROCESSING_LOGIN";
+        logger.error('Login failed.', { ip: ip, url: 'api/login', result: e.toString(), detail: err });
+        res.send({ result: err }); }
     }
   });
 });
 
+app.post('/api/logout', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
+  logger.info('Logout requested.', { ip: ip, url: 'api/logout', detail: req.session.id });
+  req.session.destroy();
+  return res.send({ result: 'OK' });
+});
+
 app.post('/api/register', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
   let ans = req.body;
   let query = "SELECT * FROM `members` WHERE `id`='" + ans.id + "';"; // 중복 계정 검사
   let result = await db.query(query);
@@ -118,7 +149,11 @@ app.post('/api/register', async function(req, res) {
               try {
                 let query = "INSERT INTO `groups` (`code`, `name`) VALUES('" + code + "', '" + ans.code + "');";
                 let result = await db.query(query);
-              } catch(e) { return res.send({ result: "FAILURE_INSERT_INTO_GROUPS_ERROR" }); }
+              } catch(e) {
+                let err = "FAILURE_INSERT_INTO_GROUPS_ERROR";
+                logger.error('Admin register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+                return res.send({ result: err });
+              }   
               
               // 그룹 회원 테이블 생성
               try {
@@ -132,14 +167,21 @@ app.post('/api/register', async function(req, res) {
                     "FOREIGN KEY(`id`)" +
                     "REFERENCES `members`(`id`) ON DELETE CASCADE);";
                 let result = await db.query(query);
-              } catch(e) { return res.send({ result: "FAILURE_CREATE_TABLE_GROUPMEMBERS_ERROR" }); }
+              } catch(e) {
+                let err = "FAILURE_CREATE_TABLE_GROUPMEMBERS_ERROR";
+                logger.error('Admin register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+                return res.send({ result: err });
+              }
               
               // 그룹 회원 테이블에 유저 정보 삽입
               try {
                 let query = "INSERT INTO `" + code + "` (`id`, `name`, `rank`, `role`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'admin');";
                 let result = await db.query(query);
-              } catch(e) { return res.send({ result: "FAILURE_INSERT_USERINFO_INTO_TABLE_GROUPMEMBERS_ERROR" }); }
-              
+              } catch(e) {
+                let err = "FAILURE_INSERT_USERINFO_INTO_TABLE_GROUPMEMBERS_ERROR";
+                logger.error('Admin register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+                return res.send({ result: err });
+              }              
               // 그룹 게시판 테이블 생성
               try {
                 let query = "CREATE TABLE `" + code + "_board` (" +
@@ -149,10 +191,19 @@ app.post('/api/register', async function(req, res) {
                     "`content` TEXT," +
                     "`reply` TEXT );";
                 let result = await db.query(query);
-              } catch(e) { return res.send({ result: "FAILURE_CREATE_TABLE_GROUPBOARD_ERROR" }); }
+              } catch(e) {
+                let err = "FAILURE_CREATE_TABLE_GROUPBOARD_ERROR";
+                logger.error('Admin register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+                return res.send({ result: err });
+              }
+              logger.info('Admin registered.', { ip: ip, url: '/api/register', detail: ans.id });
               res.send({ result: 'OK' });
             }
-          } catch(e) { return res.send({ result: "FAILURE_INSERT_INTO_MEMBERS_ERROR" }); }
+          } catch(e) {
+            let err = "FAILURE_INSERT_INTO_MEMBERS_ERROR";
+            logger.error('Admin register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+            return res.send({ result: err });
+          }
         }
         else return res.send({ result: "FAILURE_ENCRYPT_ERROR" });
       });
@@ -168,7 +219,11 @@ app.post('/api/register', async function(req, res) {
         let query = "SELECT * FROM `groups` WHERE `code`='" + ans.code + "';";
         let result = await db.query(query);
         if(!result.length) return res.send({ result: "유효한 코드가 아닙니다" });
-      } catch(e) { return res.send({ result: "FAILURE_WHILE_GROUP_CODE_CHECK" }); }
+        } catch(e) {
+          let err = "FAILURE_WHILE_GROUP_CODE_CHECK";
+          logger.error('Member register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+          return res.send({ result: err });
+        }
       
       key({ password: ans.pw }, async function (err, pass, salt, hash) { // 비밀번호 암호화
         if(!err) {
@@ -176,15 +231,24 @@ app.post('/api/register', async function(req, res) {
             // `members` 테이블에 유저 정보 삽입
             let query = "INSERT INTO `members` VALUES('" + ans.id + "', '" + hash + "', '" + salt + "', '" + ans.code + "');";
             let result = await db.query(query);
-          } catch(e) { return res.send({ result: "FAILURE_INSERT_INTO_MEMBERS_ERROR" }); }
+          } catch(e) {
+            let err = "FAILURE_INSERT_INTO_MEMBERS_ERROR";
+            logger.error('Member register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+            return res.send({ result: err });
+          }
 
           try {
             // 그룹 회원 테이블에 유저 정보 삽입
             let query = "INSERT INTO `" + ans.code + "` (`id`, `name`, `rank`, `role`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'member');";
             let result = await db.query(query);
-          } catch(e) { return res.send({ result: "FAILURE_INSERT_INTO_GROUP_MEMBERS_ERROR" }); }              
+          } catch(e) {
+            let err = "FAILURE_INSERT_INTO_GROUP_MEMBERS_ERROR";
+            logger.error('Member register failed.', { ip: ip, url: '/api/register', result: e.toString(), detail: err });
+            return res.send({ result: err });
+          }
         }
       });
+      logger.info('Member registered.', { ip: ip, url: '/api/register', detail: ans.id });
       res.send({ result: "OK" });
     }
   }
@@ -193,6 +257,7 @@ app.post('/api/register', async function(req, res) {
 app.listen(3110, async function() {
   db = await pool.getConnection();
   console.log('Express is listening on port 3110');
+  logger.info('Server startup finished.', { ip: 'LOCALHOST', url: 'SERVER' });
   setInterval(async function() {
     try { await db.query('SHOW TABLES;'); }
     catch(e) { db = await pool.getConnection(); }

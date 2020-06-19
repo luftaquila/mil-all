@@ -57,7 +57,7 @@
 						<div class="col-md-10 text-right menu-1">
 							<ul>
 								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li id='toLogin'><a href="login.html">Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
               </span>
 							<div class="desc">
 								<h3>체력 관리</h3>
-								<p>그룹별, 개인별 운동량 목표를 설정하고 달성할 수 있도록 도와줍니다.</p>
+								<p>그룹별, 개인별 운동량 목표를 설정하면 달성률, 소모 칼로리 등을 계산해 주어 목표를 달성할 수 있도록 도와줍니다.</p>
 							</div>
 						</div>
 					</div>
@@ -134,7 +134,7 @@
 							</span>
 							<div class="desc">
 								<h3>식단 관리</h3>
-								<p>급양대별 식단과 열량 정보를 알려 줍니다. 체력 관리 기능과 연동해 칼로리 관리를 도와줍니다.</p>
+								<p>설정한 급양대의 식단과 열량 정보를 알려줍니다. 체력 관리 기능과 연동해 일일 칼로리 관리를 도와줍니다.</p>
 							</div>
 						</div>
 					</div>
@@ -145,7 +145,7 @@
 							</span>
 							<div class="desc">
 								<h3>건강 관리</h3>
-								<p>지휘관에게 국군 부대에서 각 분기별 유행하는 주요 감염병 통계를 제공해 위협 질병에 대처할 수 있게 도와줍니다. 이 외에도 인근의 의료기관 정보를 지도상에서 한 눈에 보여줍니다.</p>
+								<p>국군 부대에서 매년 분기별로 유행하는 주요 감염병 통계를 제공해 질병 위협에 효과적으로 대처할 수 있게 도와줍니다. 이 외에도 인근의 의료기관 정보를 지도상에서 한 눈에 보여줍니다.</p>
 							</div>
 						</div>
 					</div>
@@ -156,7 +156,7 @@
 							</span>
 							<div class="desc">
 								<h3>소통의 창</h3>
-								<p>그룹 구성원이 이용할 수 있는 게시판 기능을 제공합니다. 지휘관이 공지사항 기능을 통해 손쉽게 전파사항을 전달할 수 있게 도와줍니다. 어려움을 겪는 병사가 지휘관과 1:1 채팅을 할 수 있는 접근성 높은 서비스를 제공합니다.</p>
+								<p>그룹 구성원이 이용할 수 있는 게시판 및 댓글 기능을 제공합니다. 지휘관은 공지사항 기능을 통해 손쉽게 전파사항을 전달할 수 있습니다. 어려움을 겪는 병사가 지휘관과 1:1 채팅을 할 수 있는 접근성 높은 서비스를 제공합니다.</p>
 							</div>
 						</div>
 					</div>
@@ -256,6 +256,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src='res/micromodal/micromodal.min.js'></script>
   <script src='main.js'></script>
   <script>
+    $.ajax({
+      url: 'api/loginCheck',
+      type: 'POST',
+      success: function(res) {
+        if(res.result) {
+          if(res.result == "true") $('#toLogin a').text('Mypage');
+        }
+      }
+    });
     $.ajax({
       url: '/api/groupMemberCount',
       type: 'POST',

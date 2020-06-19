@@ -169,6 +169,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src='res/alertify/alertify.min.js'></script>
   <script src='res/micromodal/micromodal.min.js'></script>
   <script src='main.js'></script>
-  <script>$.ajax({ url: '/api/loginCheck', type: 'POST', success: function(res) { if(res.result) { if(res.result == "true") location.href = 'mypage'; } }});</script>
+  <script>
+    $.ajax({
+      url: '/api/loginCheck',
+      type: 'POST',
+      success: function(res) {
+        if(res.result) {
+          if(res.result == 'true') location.href = ((res.detail == 'admin') ? 'console' : 'mypage');
+        }
+      }})
+    </script>
   </body>
 </html>

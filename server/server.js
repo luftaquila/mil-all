@@ -50,7 +50,10 @@ app.post('/api/groupMemberCount', async function(req, res) {
   return res.send({ groups: groups[0]['COUNT(*)'].toString(), members: members[0]['COUNT(*)'].toString() });
 });
 
-app.post('/api/loginCheck', function(req, res) { if(req.session.login) return res.send({ result: "true" }); });
+app.post('/api/loginCheck', function(req, res) {
+  if(req.session.login) return res.send({ result: "true", detail: req.session.role });
+  else return res.send({ result: 'false' });
+});
 
 app.post('/api/login', async function(req, res) {
   const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
@@ -83,7 +86,7 @@ app.post('/api/login', async function(req, res) {
             req.session.role = resp.role;
             req.session.code = result.code;
             logger.info('Login requested.', { ip: ip, url: 'api/login', detail: resp.id });
-            return res.send({ result: 'OK' });
+            return res.send({ result: 'OK', detail: resp.role });
           }
           else return res.send({ result: "FAILURE_NO_MEMBER_INFO_ON_GROUP_MEMBERS" });
         }

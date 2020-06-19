@@ -16,7 +16,7 @@ function login() {
     data: { id: id, pw: pw }, 
     success: function(res) {
       if(res.result) {
-        if(res.result == 'OK') location.href = 'mypage';
+        if(res.result == 'OK') location.href = ((res.detail == 'admin') ? 'console' : 'mypage');
         else alertify.error(res.result);
       }
     }

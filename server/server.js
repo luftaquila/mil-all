@@ -44,6 +44,12 @@ app.use(session({
  cookie: {expires: new Date(2147483647000)}
 }));
 
+app.post('/api/groupMemberCount', async function(req, res) {
+  let groups = await db.query("SELECT COUNT(*) FROM `groups`;");
+  let members = await db.query("SELECT COUNT(*) FROM `members`;");
+  return res.send({ groups: groups[0]['COUNT(*)'].toString(), members: members[0]['COUNT(*)'].toString() });
+});
+
 app.post('/api/loginCheck', function(req, res) { if(req.session.login) return res.send({ result: "true" }); });
 
 app.post('/api/login', async function(req, res) {
@@ -85,7 +91,8 @@ app.post('/api/login', async function(req, res) {
       } catch(e) {
         let err = "FAILURE_WHILE_PROCESSING_LOGIN";
         logger.error('Login failed.', { ip: ip, url: 'api/login', result: e.toString(), detail: err });
-        res.send({ result: err }); }
+        res.send({ result: err });
+      }
     }
   });
 });

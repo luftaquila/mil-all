@@ -74,7 +74,7 @@
 							<div class="animate-box">
 								<h2>군생활의 모든 것 Mil-All</h2>
                 <p>설명 어쩌고저쩌고</p>
-								<p style='font-size: 15px'>밀알 서비스는 병사들의 이용 편의를 고려하여 모바일 환경에 최적화되어 있습니다.<br>PC 접속시 화면이 이상하게 표시되면 창 너비를 줄여 주세요.</p>
+								<p style='font-size: 15px'>밀알 서비스는 병사들의 이용 편의를 고려하여<br>모바일 환경에 최적화되어 있습니다.<br>PC 접속시 화면이 깨진다면 창 너비를 줄여 주세요.</p>
 								<p><a href="login.html" class="btn btn-primary btn-lg btn-custom">시작하기</a></p>
 							</div>
 						</div>
@@ -173,7 +173,7 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="flaticon-ribbon"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="143" data-speed="2000" data-refresh-interval="50"></span>
+									<span id="groupcount" class="colorlib-counter js-counter" data-from="0" data-to="0" data-speed="1500" data-refresh-interval="50"></span>
 									<span class="colorlib-counter-label">현재 개설된 그룹</span>
 								</div>
 							</div>
@@ -182,7 +182,7 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="flaticon-church"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="2593" data-speed="2000" data-refresh-interval="50"></span>
+									<span id="membercount" class="colorlib-counter js-counter" data-from="0" data-to="0" data-speed="1500" data-refresh-interval="50"></span>
 									<span class="colorlib-counter-label">현재 가입한 회원</span>
 								</div>
 							</div>
@@ -252,9 +252,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-    <script src='res/alertify/alertify.min.js'></script>
-    <script src='res/micromodal/micromodal.min.js'></script>
-    <script src='main.js'></script>
+  <script src='res/alertify/alertify.min.js'></script>
+  <script src='res/micromodal/micromodal.min.js'></script>
+  <script src='main.js'></script>
+  <script>
+    $.ajax({
+      url: '/api/groupMemberCount',
+      type: 'POST',
+      success: function(res) {
+        $('#groupcount').attr('data-to', res.groups);
+        $('#membercount').attr('data-to', res.members);
+        $('.js-counter').countTo({
+			    formatter: function (value, options) { return value.toFixed(options.decimals); },
+		    });
+      }
+    });
+  </script>
+        
   
   </body>
 </html>

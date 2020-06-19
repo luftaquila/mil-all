@@ -262,7 +262,7 @@
 		goToTop();
 		loaderPage();
 		parallax();
-		counter();
+	  //counter();
 		counterWayPoint();
 		owlCrouselFeatureSlide();
 	});

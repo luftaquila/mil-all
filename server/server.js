@@ -51,7 +51,7 @@ app.post('/api/groupMemberCount', async function(req, res) {
 });
 
 app.post('/api/loginCheck', function(req, res) {
-  if(req.session.login) return res.send({ result: "true", detail: req.session.role });
+  if(req.session.login) return res.send({ result: "true", detail: req.session.role, session: req.session });
   else return res.send({ result: 'false' });
 });
 

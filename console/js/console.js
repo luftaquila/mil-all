@@ -9,14 +9,16 @@ function init() {
     type: 'POST',
     success: function(res) {
       if(res.result) {
-        console.log(res);
         if(res.result == 'true' && res.detail != 'admin') location.href = '/mypage';
         else if(res.result == 'false') location.href = '/login.html';
+        else {
+          $('#welcomeMSG').text(res.session.name + ' ' + res.session.rank + '님 반갑습니다.');
+        }
       }
     }
   });
 }
-function eventListener() { 
+function eventListener() {
   $('.nav-item').click(function() {
     $('.nav-item').removeClass('active');
     $(this).addClass('active');

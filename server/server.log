@@ -43,3 +43,12 @@
 {"ip":"116.125.99.49","url":"api/login","detail":"19-70015007","level":"info","message":"Login requested.","timestamp":"2020-06-20 00:58:53"}
 {"ip":"116.125.99.49","url":"api/logout","detail":"JEiWsXO-0n0haNiPUKHL1Gx9XaqGSIU2","level":"info","message":"Logout requested.","timestamp":"2020-06-20 00:58:59"}
 {"ip":"116.125.99.49","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-20 00:59:05"}
+{"ip":"116.125.99.49","url":"api/login","detail":"19-70015007","level":"info","message":"Login requested.","timestamp":"2020-06-20 01:02:46"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-20 01:03:09"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-20 01:03:12"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-20 01:04:15"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-20 01:04:26"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-20 01:05:46"}
+{"ip":"223.39.149.161","url":"api/login","detail":"19-70015007","level":"info","message":"Login requested.","timestamp":"2020-06-20 01:15:11"}
+{"ip":"223.39.149.161","url":"api/logout","detail":"lKDvs6TFDxQxn2lBPoZ9xKND4rnv95sv","level":"info","message":"Logout requested.","timestamp":"2020-06-20 01:15:23"}
+{"ip":"223.39.149.161","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-20 01:15:29"}

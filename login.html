@@ -40,10 +40,8 @@
     <link rel="stylesheet" href="res/btn.css" />
     <link rel='stylesheet' href='main.css' />
     <script src="https://kit.fontawesome.com/291664cdf8.js" crossorigin="anonymous"></script>
-
 	</head>
 	<body>
-		
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
@@ -80,7 +78,7 @@
 			</div>
 		</section>
 
-		<div id="colorlib-contact">
+		<div id="colorlib-contact" style='margin-top: 50px'>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-pull-4 animate-box">
@@ -89,7 +87,7 @@
 							<div class="row form-group">
 								<div class="col-md-6">
 									<!-- <label for="fname">First Name</label> -->
-									<input type="number" id="id" class="form-control" placeholder="군번">
+									<input type="tel" id="id" class="form-control" placeholder="군번">
 								</div>
               </div>
 							<div class="row form-group">
@@ -99,7 +97,7 @@
 								</div>
               </div>
 							<div class="form-group">
-								<span class="btn btn-primary">로그인</span>
+								<span class="btn btn-primary" onclick='login();'>로그인</span>
 								<a href='register.html' class="btn btn-info">회원가입</a>
 							</div>
 						</form>		
@@ -116,7 +114,7 @@
 						2020 국방 공공데이터 활용 경진대회 출품작
 					</div>
           <div class="col-md-3 colorlib-widget" style='margin-bottom: 0px!important'>
-						<h4>Team</h4>
+						<h4 style='margin-top: 15px'>Team</h4>
 						<ul class="colorlib-footer-links">
 							<li>무슨무슨 담당 - 한주연</li>
 							<li style='margin-bottom: 20px'><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
@@ -168,9 +166,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-    <script src='res/alertify/alertify.min.js'></script>
-    <script src='res/micromodal/micromodal.min.js'></script>
-    <script src='main.js'></script>
-  
+  <script src='res/alertify/alertify.min.js'></script>
+  <script src='res/micromodal/micromodal.min.js'></script>
+  <script src='main.js'></script>
+  <script>$.ajax({ url: '/api/loginCheck', type: 'POST', success: function(res) { if(res.result) { if(res.result == "true") location.href = 'mypage'; } }});</script>
   </body>
 </html>

@@ -287,7 +287,13 @@ app.post('/api/memberdata', async function(req, res) {
 });
 
 app.post('/api/mydata', async function(req, res) {
-  let query = "SELECT * FROM `" + req.session.code + "` WHERE `id`='" + req.session.uid + "';"
+  let query = "SELECT * FROM `" + req.session.code + "` WHERE `id`='" + req.session.uid + "';";
+  let result = await db.query(query);
+  return res.send(result);
+});
+
+app.post('/api/myGroupInfo', async function(req, res) {
+  let query = "SELECT * FROM `groups` WHERE `code`='" + req.session.code + "';";
   let result = await db.query(query);
   return res.send(result);
 });

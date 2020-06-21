@@ -80,7 +80,7 @@ app.post('/api/login', async function(req, res) {
           if(resp.length) {
             resp = resp[0];
             req.session.login = true;
-            req.session.id = resp.id;
+            req.session.uid = resp.id;
             req.session.name = resp.name;
             req.session.rank = resp.rank;
             req.session.role = resp.role;
@@ -102,7 +102,7 @@ app.post('/api/login', async function(req, res) {
 
 app.post('/api/logout', async function(req, res) {
   const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
-  logger.info('Logout requested.', { ip: ip, url: 'api/logout', detail: req.session.id });
+  logger.info('Logout requested.', { ip: ip, url: 'api/logout', detail: req.session.uid });
   req.session.destroy();
   return res.send({ result: 'OK' });
 });
@@ -262,6 +262,18 @@ app.post('/api/register', async function(req, res) {
       res.send({ result: "OK" });
     }
   }
+});
+
+app.post('/api/groupdata', async function(req, res) {
+  let query = "SELECT * FROM `groups` WHERE `code`='" + req.session.code + "';";
+  let result = await db.query(query);
+  return res.send(result);
+});
+
+app.post('/api/memberdata', async function(req, res) {
+  let query = "SELECT * FROM `" + req.session.code + "`;";
+  let result = await db.query(query);
+  return res.send(result);
 });
 
 app.listen(3110, async function() {

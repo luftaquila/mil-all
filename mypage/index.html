@@ -11,34 +11,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="../css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="../css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
 
 	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="../css/magnific-popup.css">
 
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../css/owl.carousel.min.css">
+	<link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="../js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
     
-    <link rel="stylesheet" href="res/alertify/alertify.core.css" />
-    <link rel="stylesheet" href="res/alertify/alertify.default.css" id="toggleCSS" />
-    <link rel="stylesheet" href="res/micromodal/micromodal.min.css" />
-    <link rel="stylesheet" href="res/btn.css" />
-    <link rel='stylesheet' href='main.css' />
+    <link rel="stylesheet" href="../res/alertify/alertify.core.css" />
+    <link rel="stylesheet" href="../res/alertify/alertify.default.css" id="toggleCSS" />
+    <link rel="stylesheet" href="../res/micromodal/micromodal.min.css" />
+    <link rel="stylesheet" href="../res/btn.css" />
+    <link rel='stylesheet' href='../main.css' />
     <script src="https://kit.fontawesome.com/291664cdf8.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -54,8 +54,14 @@
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li class="active"><a href="/mypage">Home</a></li>
+                <!--
+								<li><a href="health.html">체력 관리</a></li>
+								<li><a href="diet.html">식단 관리</a></li>
+								<li><a href="medical.html">건강 관리</a></li>
+								<li><a href="communication.html">소통의 창</a></li>
+                -->
+                <li><a onclick='$.ajax({ url: "https://mil-all.luftaquila.io/api/logout", type: "POST", success: function(res) { location.reload(); } });'>Logout</a></li>
 							</ul>
 						</div>
 					</div>
@@ -68,12 +74,9 @@
 			<div class="display-t display-t2 text-center">
 				<div class="display-tc">
 					<div class="container">
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box">
-								<h2>군생활의 모든 것 Mil-All</h2>
-							</div>
-						</div>
-					</div>
+            <div id='portrait' class='hexagon portrait' style='transform: scale( 1.8 ) rotate(30deg); margin-top: 7rem;'><span></span></div>
+            <p style='padding-top: 9rem'>호롤로롤로로로ㅗㅗ로롤</p>
+          </div>
 				</div>
 			</div>
 		</section>
@@ -82,26 +85,22 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-pull-4 animate-box">
-						<h2>로그인</h2>
-						<form action="#">
-							<div class="row form-group">
-								<div class="col-md-6">
-									<!-- <label for="fname">First Name</label> -->
-									<input type="tel" id="id" class="form-control" placeholder="군번">
-								</div>
-              </div>
-							<div class="row form-group">
-								<div class="col-md-6">
-									<!-- <label for="fname">First Name</label> -->
-									<input type="password" id="pw" class="form-control" placeholder="비밀번호">
-								</div>
-              </div>
-							<div class="form-group">
-								<span class="btn btn-primary" onclick='login();'>로그인</span>
-								<a href='register.html' class="btn btn-info">회원가입</a>
-							</div>
-						</form>		
-					</div>
+            <div style='margin-top: 5rem;'>
+              <ol class="even">
+                <div id='communication' class='hexagon notClicked' style="transform: scale( 0.6 ) rotate(30deg);"><span><i class='fas fa-satellite icon'></i></span></div>
+              </ol>
+              <ol class="odd">
+                <div id='health' class='hexagon notClicked' style="transform: scale( 0.6 ) rotate(30deg);"><span><i class='fas fa-dumbbell icon'></i></span></div>
+                <div style='display: inline-block; width: 3rem;'></div>
+                <div id='diet' class='hexagon notClicked' style="transform: scale( 0.6 ) rotate(30deg);"><span><i class='fas fa-utensils icon'></i></span></div>
+              </ol>
+              <ol class="even">
+                <div id='medical' class='hexagon notClicked' style="transform: scale( 0.6 ) rotate(30deg);"><span><i class='fas fa-book-medical icon'></i></span></div>
+              </ol>
+              <div style='display: none; position: absolute; z-index: 10; top: 50%; left: 50%; margin-top: -8rem; margin-left: -11rem; width: 22rem; height: 15rem; border-radius: 50%; border: 3px solid black;'></div>
+            </div>
+            
+          </div>
 				</div>
 			</div>
 		</div>
@@ -145,39 +144,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 	
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
 	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
 	<!-- YTPlayer -->
-	<script src="js/jquery.mb.YTPlayer.min.js"></script>
+	<script src="../js/jquery.mb.YTPlayer.min.js"></script>
 	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/magnific-popup-options.js"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="../js/jquery.countTo.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 
-  <script src='res/alertify/alertify.min.js'></script>
-  <script src='res/micromodal/micromodal.min.js'></script>
-  <script src='main.js'></script>
-  <script>
-    $.ajax({
-      url: '/api/loginCheck',
-      type: 'POST',
-      success: function(res) {
-        if(res.result) {
-          if(res.result == 'true') location.href = ((res.detail == 'admin') ? 'console' : 'mypage');
-        }
-      }})
-    </script>
+  <script src='../res/alertify/alertify.min.js'></script>
+  <script src='../res/micromodal/micromodal.min.js'></script>
+  <script src='../main.js'></script>
+  <script src='mypage.js'></script>
   </body>
 </html>

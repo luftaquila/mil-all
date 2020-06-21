@@ -58,7 +58,7 @@ function health() {
                 });
               });
               $('#date').val(new Date().format('yyyy-mm-dd')).trigger('change');
-              let target = test.filter(o => ((Number(o.age_lwlmtprcdc) < info.age) && (Number(o.age_uprlmtprcdc) > info.age)));
+              let target = test.filter(o => ((Number(o.age_lwlmtprcdc) < info.age) && (Number(o.age_uprlmtprcdc) >= info.age)));
               let maxRecord = {
                 '3km': Math.min.apply(Math, health.map(function(o) { return o['3km']; })),
                 pullup: Math.max.apply(Math, health.map(function(o) { return o.pullup; })),
@@ -116,7 +116,6 @@ function health() {
                 data[key] = data[key] < 0 ? 0 : (data[key] > 100 ? 100 : data[key]);
               });
               let groupgoal = JSON.parse(groupinfo.health);
-              console.log(groupgoal);
               let chart = new Chart(document.getElementById("healthChart"), {
                 type: 'radar',
                 data: {

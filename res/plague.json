@@ -1,0 +1,254 @@
+{"DESCRIPTION":{"years":"연도","qtrdvs":"분기구분","sicknsnm":"질병명","prsts":"현황","rmrk":"비고"}
+, "DATA":[
+{"years":"2015","qtrdvs":"2","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"A형 간염","prsts":"1","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"유행성 이하선염","prsts":"35","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"수 두","prsts":"38","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"결 핵","prsts":"82","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"말라리아","prsts":"83","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"쯔쯔가무시증","prsts":"5","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"신증후군 출혈열","prsts":"12","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"매 독","prsts":"28","rmrk":"0"}
+,{"years":"2015","qtrdvs":"2","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"A형 간염","prsts":"7","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"유행성 이하선염","prsts":"8","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"수 두","prsts":"32","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"결 핵","prsts":"67","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"말라리아","prsts":"57","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"쯔쯔가무시증","prsts":"3","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"렙토스피라증","prsts":"2","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"신증후군 출혈열","prsts":"8","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"매 독","prsts":"22","rmrk":"0"}
+,{"years":"2015","qtrdvs":"3","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"A형 간염","prsts":"2","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"유행성 이하선염","prsts":"11","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"수 두","prsts":"45","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"결 핵","prsts":"80","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"말라리아","prsts":"8","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"쯔쯔가무시증","prsts":"27","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"렙토스피라증","prsts":"0","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"신증후군 출혈열","prsts":"25","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"매 독","prsts":"13","rmrk":"0"}
+,{"years":"2015","qtrdvs":"4","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"A형 간염","prsts":"12","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"유행성 이하선염","prsts":"16","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"수 두","prsts":"35","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"결 핵","prsts":"73","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"말라리아","prsts":"1","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"쯔쯔가무시증","prsts":"3","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"렙토스피라증","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"신증후군 출혈열","prsts":"8","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"매 독","prsts":"19","rmrk":"0"}
+,{"years":"2016","qtrdvs":"1","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"A형 간염","prsts":"5","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"유행성 이하선염","prsts":"27","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"수 두","prsts":"29","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"결 핵","prsts":"69","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"말라리아","prsts":"72","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"쯔쯔가무시증","prsts":"7","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"신증후군 출혈열","prsts":"3","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"매 독","prsts":"16","rmrk":"0"}
+,{"years":"2016","qtrdvs":"2","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"A형 간염","prsts":"5","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"유행성 이하선염","prsts":"5","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"수 두","prsts":"38","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"결 핵","prsts":"59","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"말라리아","prsts":"75","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"쯔쯔가무시증","prsts":"5","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"렙토스피라증","prsts":"2","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"신증후군 출혈열","prsts":"1","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"매 독","prsts":"23","rmrk":"0"}
+,{"years":"2016","qtrdvs":"3","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"A형 간염","prsts":"2","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"유행성 이하선염","prsts":"3","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"수 두","prsts":"51","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"결 핵","prsts":"54","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"말라리아","prsts":"7","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"쯔쯔가무시증","prsts":"20","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"신증후군 출혈열","prsts":"14","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"매 독","prsts":"9","rmrk":"0"}
+,{"years":"2016","qtrdvs":"4","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"장티푸스","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"A형 간염","prsts":"13","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"유행성 이하선염","prsts":"10","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"수 두","prsts":"56","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"결 핵","prsts":"56","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"말라리아","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"수막구균성 수막염","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"쯔쯔가무시증","prsts":"2","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"신증후군 출혈열","prsts":"19","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"매 독","prsts":"37","rmrk":"0"}
+,{"years":"2017","qtrdvs":"1","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"A형 간염","prsts":"8","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"유행성 이하선염","prsts":"26","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"수 두","prsts":"40","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"결 핵","prsts":"18","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"말라리아","prsts":"45","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"쯔쯔가무시증","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"신증후군 출혈열","prsts":"4","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"매 독","prsts":"65","rmrk":"0"}
+,{"years":"2017","qtrdvs":"2","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"장티푸스","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"A형 간염","prsts":"4","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"유행성 이하선염","prsts":"7","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"수 두","prsts":"52","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"결 핵","prsts":"37","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"말라리아","prsts":"34","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"수막구균성 수막염","prsts":"1","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"쯔쯔가무시증","prsts":"3","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"렙토스피라증","prsts":"4","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"신증후군 출혈열","prsts":"3","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"매 독","prsts":"50","rmrk":"0"}
+,{"years":"2017","qtrdvs":"3","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"A형 간염","prsts":"3","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"유행성 이하선염","prsts":"13","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"수 두","prsts":"34","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"결 핵","prsts":"26","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"말라리아","prsts":"3","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"쯔쯔가무시증","prsts":"9","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"렙토스피라증","prsts":"0","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"신증후군 출혈열","prsts":"2","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"매 독","prsts":"49","rmrk":"0"}
+,{"years":"2017","qtrdvs":"4","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"A형 간염","prsts":"2","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"유행성 이하선염","prsts":"9","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"수 두","prsts":"37","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"결 핵","prsts":"19","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"말라리아","prsts":"6","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"쯔쯔가무시증","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"렙토스피라증","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"신증후군 출혈열","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"매 독","prsts":"38","rmrk":"0"}
+,{"years":"2018","qtrdvs":"1","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"장티푸스","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"A형 간염","prsts":"4","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"유행성 이하선염","prsts":"18","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"수 두","prsts":"71","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"결 핵","prsts":"19","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"말라리아","prsts":"45","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"쯔쯔가무시증","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"렙토스피라증","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"신증후군 출혈열","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"매 독","prsts":"35","rmrk":"0"}
+,{"years":"2018","qtrdvs":"2","sicknsnm":"폐 렴","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"A형 간염","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"유행성 이하선염","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"수 두","prsts":"22","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"결 핵","prsts":"11","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"말라리아","prsts":"14","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"쯔쯔가무시증","prsts":"2","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"렙토스피라증","prsts":"3","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"신증후군 출혈열","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"매 독","prsts":"38","rmrk":"0"}
+,{"years":"2018","qtrdvs":"3","sicknsnm":"폐 렴","prsts":"434","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"A형 간염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"유행성 이하선염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"수 두","prsts":"19","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"결 핵","prsts":"17","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"말라리아","prsts":"3","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"쯔쯔가무시증","prsts":"1","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"렙토스피라증","prsts":"3","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"신증후군 출혈열","prsts":"0","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"매 독","prsts":"45","rmrk":"0"}
+,{"years":"2018","qtrdvs":"4","sicknsnm":"폐 렴","prsts":"647","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"A형 간염","prsts":"3","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"홍 역","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"유행성 이하선염","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"수 두","prsts":"29","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"결 핵","prsts":"18","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"말라리아","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"수막구균성 수막염","prsts":"1","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"쯔쯔가무시증","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"렙토스피라증","prsts":"4","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"신증후군 출혈열","prsts":"3","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"매 독","prsts":"37","rmrk":"0"}
+,{"years":"2019","qtrdvs":"1","sicknsnm":"폐 렴","prsts":"517","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"A형 간염","prsts":"6","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"세균성 이질","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"파상풍","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"홍 역","prsts":"2","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"유행성 이하선염","prsts":"18","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"수 두","prsts":"44","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"결 핵","prsts":"16","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"말라리아","prsts":"27","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"수막구균성 수막염","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"쯔쯔가무시증","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"렙토스피라증","prsts":"0","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"신증후군 출혈열","prsts":"4","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"매 독","prsts":"18","rmrk":"0"}
+,{"years":"2019","qtrdvs":"2","sicknsnm":"폐 렴","prsts":"621","rmrk":"0"}
+]}

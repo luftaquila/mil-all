@@ -287,8 +287,17 @@ app.post('/api/memberdata', async function(req, res) {
 });
 
 app.post('/api/mydata', async function(req, res) {
-  return res.send(req.session);
+  let query = "SELECT * FROM `" + req.session.code + "` WHERE `id`='" + req.session.uid + "';"
+  let result = await db.query(query);
+  return res.send(result);
 });
+
+app.post('/api/updateHealth', async function(req, res) {
+  let query = "UPDATE `" + req.session.code + "` SET `health`='" + req.body.data + "' WHERE `id`='" + req.session.uid + "';";
+  let result = await db.query(query);
+  return res.send({ result: 'OK' });
+});
+
 
 app.listen(3110, async function() {
   db = await pool.getConnection();

@@ -110,7 +110,45 @@
           </div>
           <div class="col-md-4 animate-box" style='margin-top: 7rem'>
             <article>
-              
+              <h2>일일 운동</h2><br>
+              <div style='text-align: center'>
+                <input id="date" class='' style='margin: 100 0;' type="date" value="" />
+              </div><br>
+              <table style='margin: 0px; width: 100%; text-align: center; border-collapse: separate; border-spacing: 0 10px;'>
+                <colgroup>
+                  <col width='50%'>
+                  <col width='50%'>
+                </colgroup>
+                <tr>
+                  <td>3km 달리기</td>
+                  <td><input type="number" id="3km_min" class="healthAmount form-control" style='display: inline-block; width: 40%' placeholder="분" min=0> : <input type="number" id="3km_sec" class="healthAmount form-control" style='display: inline-block; width: 40%' placeholder="초" min=0 max=60></td>
+                </tr>
+                <tr>
+                  <td>윗몸일으키기</td>
+                  <td><input type="number" id="pullup" class="healthAmount form-control" placeholder="회" min=0></td>
+                </tr>
+                <tr>
+                  <td>팔굽혀펴기</td>
+                  <td><input type="number" id="pushup" class="healthAmount form-control" placeholder="회" min=0></td>
+                </tr>
+                <tr>
+                  <td>벤치프레스</td>
+                  <td><input type="number" id="bench" class="healthAmount form-control" placeholder="kg" min=0></td>
+                </tr>
+                <tr>
+                  <td>데드리프트</td>
+                  <td><input type="number" id="lift" class="healthAmount form-control" placeholder="kg" min=0></td>
+                </tr>
+                <tr>
+                  <td>스쿼트</td>
+                  <td><input type="number" id="squat" class="healthAmount form-control" placeholder="회" min=0></td>
+                </tr>
+              </table>
+              <div>&nbsp;
+                <span id="saverecord" class="btn btn-success btn-icon-split" style='float: right; width: 30; height: 5;'>
+                  <span class="text">저장</span>
+                </span>
+              </div>
             </article>
           </div>
 				</div>

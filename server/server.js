@@ -84,6 +84,9 @@ app.post('/api/login', async function(req, res) {
             req.session.name = resp.name;
             req.session.rank = resp.rank;
             req.session.role = resp.role;
+            req.session.age = resp.age;
+            req.session.sex = resp.sex;
+            req.session.group = resp.group;
             req.session.code = result.code;
             logger.info('Login requested.', { ip: ip, url: 'api/login', detail: resp.id });
             return res.send({ result: 'OK', detail: resp.role });
@@ -132,6 +135,10 @@ app.post('/api/register', async function(req, res) {
     else if(ans.pw.length > 20) msg = "비밀번호는 20자리를 넘을 수 없습니다";
     else if(/"|'|;|\\| |%|_|`/g.test(ans.pw)) msg = "다음 문자는 사용할 수 없습니다 - " + '" ' + "' ; \ % _ ` 공백";
     
+    else if(!ans.age) msg = "나이를 입력해 주세요";
+    else if(!ans.sex) msg = "성별을 선택해 주세요";
+    else if(!ans.group) msg = "군 구분을 선택해 주세요";
+    
     if(msg) return res.send({ result: msg });
     
     if(ans.isCommander == "true") { // 가입자가 지휘관일 경우
@@ -172,6 +179,9 @@ app.post('/api/register', async function(req, res) {
                     "`name` VARCHAR(10) NOT NULL," +
                     "`rank` VARCHAR(10) NOT NULL," +
                     "`role` VARCHAR(10)," +
+                    "`sex` VARCHAR(3)," +
+                    "`age` INT," +
+                    "`group` VARCHAR(10)," +
                     "`health` TEXT," +
                     "`chat` TEXT," +
                     "FOREIGN KEY(`id`)" +
@@ -185,7 +195,7 @@ app.post('/api/register', async function(req, res) {
               
               // 그룹 회원 테이블에 유저 정보 삽입
               try {
-                let query = "INSERT INTO `" + code + "` (`id`, `name`, `rank`, `role`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'admin');";
+                let query = "INSERT INTO `" + code + "` (`id`, `name`, `rank`, `role`, `age`, `sex`, `group`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'admin', " + ans.age + ", '" + ans.sex + "', '" + ans.group + "');";
                 let result = await db.query(query);
               } catch(e) {
                 let err = "FAILURE_INSERT_USERINFO_INTO_TABLE_GROUPMEMBERS_ERROR";
@@ -249,7 +259,7 @@ app.post('/api/register', async function(req, res) {
 
           try {
             // 그룹 회원 테이블에 유저 정보 삽입
-            let query = "INSERT INTO `" + ans.code + "` (`id`, `name`, `rank`, `role`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'member');";
+            let query = "INSERT INTO `" + ans.code + "` (`id`, `name`, `rank`, `role`, `age`, `sex`, `group`) VALUES('" + ans.id + "', '" + ans.name + "', '" + ans.rank + "', 'member', " + ans.age + ", '" + ans.sex + "', '" + ans.group + "');";
             let result = await db.query(query);
           } catch(e) {
             let err = "FAILURE_INSERT_INTO_GROUP_MEMBERS_ERROR";
@@ -274,6 +284,10 @@ app.post('/api/memberdata', async function(req, res) {
   let query = "SELECT * FROM `" + req.session.code + "`;";
   let result = await db.query(query);
   return res.send(result);
+});
+
+app.post('/api/mydata', async function(req, res) {
+  return res.send(req.session);
 });
 
 app.listen(3110, async function() {

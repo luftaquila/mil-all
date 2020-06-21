@@ -25,11 +25,11 @@ function login() {
 
 function register() {
   let isCommander = $('input#isCommander').prop('checked');
-  let id = $('#id').val(), rank = $('#rank').val(), name = $('#name').val(), pw = $('#pw').val(), code = $('#code').val();
+  let id = $('#id').val(), rank = $('#rank').val(), name = $('#name').val(), pw = $('#pw').val(), code = $('#code').val(), age = $('#age').val(), sex = $('input[name=sex]:checked').val(), group = $('input[name=group]:checked').val();
   $.ajax({
     url: 'api/register',
     type: 'POST',
-    data: { isCommander: isCommander, id: id, rank: rank, name: name, pw: pw, code: code },
+    data: { isCommander: isCommander, id: id, rank: rank, name: name, pw: pw, code: code, age: age, sex: sex, group: group },
     success: function(res) {
       if(res.result) {
         if(res.result == 'OK') location.href = 'login.html';

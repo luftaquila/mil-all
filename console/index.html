@@ -1,215 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>밀알 (Mil-ALl) 관리자 페이지</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='/ajoumeow/Resources/Libraries/alertify/alertify.core.css' />
-  <link rel='stylesheet' href='/ajoumeow/Resources/Libraries/alertify/alertify.default.css' />
-  <link rel='stylesheet' href='css/console.css'>
-
-</head>
-
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style=''>
-
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-fighter-jet"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">관리자 콘솔</div>
-      </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active" id='dashboard'>
-        <a class="nav-link" href="#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>밀알 (Mil-ALl) 관리자 페이지</title>
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/ajoumeow/Resources/Libraries/alertify/alertify.core.css' />
+    <link rel='stylesheet' href='/ajoumeow/Resources/Libraries/alertify/alertify.default.css' />
+    <link rel='stylesheet' href='css/console.css'>
+  </head>
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style=''>
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-fighter-jet"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">관리자 콘솔</div>
+        </a>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active" id='dashboard'>
+          <a class="nav-link" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Interface
-      </div>
-
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item" id='settings'>
-        <a class="nav-link" href='#'>
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Interface
+        </div>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item" id='settings'>
+          <a class="nav-link" href='#'>
           <i class="fas fa-fw fa-wrench"></i>
           <span>설정</span>
-        </a>
-      </li>
-      
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item" id='members'>
-        <a class="nav-link" href="#">
+          </a>
+        </li>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item" id='members'>
+          <a class="nav-link" href="#">
           <i class="fas fa-fw fa-user-edit"></i>
           <span>멤버 관리</span>
-        </a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item" id='health'>
-        <a class="nav-link" href="#">
+          </a>
+        </li>
+        <!-- Nav Item - Charts -->
+        <li class="nav-item" id='health'>
+          <a class="nav-link" href="#">
           <i class="fas fa-fw fa-heartbeat"></i>
           <span>건강 관리</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item" id='board'>
-        <a class="nav-link" href="#">
+        </li>
+        <!-- Nav Item - Tables -->
+        <li class="nav-item" id='board'>
+          <a class="nav-link" href="#">
           <i class="fas fa-fw fa-clipboard-list"></i>
           <span>게시판</span></a>
-      </li>
-      
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Sidebar Toggler (Sidebar) -->
-      <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div>
-
-    </ul>
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
-      <div id="content">
-
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
-          </button>
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-
-            <!-- Nav Item - User Information -->
-            <li class=" dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </button>
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - User Information -->
+              <li class=" dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span id='userinfo' class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                 <i class='fas fa-user'></i>&nbsp;<span id='username'></span>
-              </a>
-              <!-- Dropdown - User Information -->
-              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" id='welcomeMSG' href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                 </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" onclick='$.ajax({ url: "https://mil-all.luftaquila.io/api/logout", type: "POST", success: function(res) { location.reload(); } });'>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" id='welcomeMSG' href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" onclick='$.ajax({ url: "https://mil-all.luftaquila.io/api/logout", type: "POST", success: function(res) { location.reload(); } });'>
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   로그아웃
-                </a>
-              </div>
-            </li>
-
-          </ul>
-
-        </nav>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        
-        <div class="container-fluid text-gray-700" id='settingsContent' style='display: none;'>
-          
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">설정</h1>
-          </div>
-          <table style='width: 100%; border-spacing: 7 10; margin-left: -5; margin-top: -10; font-size: 0.8rem'>
-            <tr><td>공지사항</td></tr>
-            <tr><td colspan='3'><textarea class='setting notice' id='notice' style='width: 100%; height: 70px'></textarea></td></tr>
-          </table>
-          
-        </div>
-
-        <div class="container-fluid text-gray-700" id='membersContent' style='display: none;'>
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">멤버 관리</h1>
-          </div>
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" style='table-layout: fixed; text-align: center' cellspacing="0">
-              <colgroup>
-                <col width="150px" />
-                <col width="110px" />
-                <col width="110px" />
-                <col width="110px" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>군번</th>
-                  <th>계급</th>
-                  <th>이름</th>
-                  <th>직책</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th>군번</th>
-                  <th>계급</th>
-                  <th>이름</th>
-                  <th>직책</th>
-                </tr>
-              </tfoot>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+          <!-- Begin Page Content -->
+          <div class="container-fluid text-gray-700" id='settingsContent' style='display: none;'>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">설정</h1>
+            </div>
+            <table style='width: 100%; border-spacing: 7 10; margin-left: -5; margin-top: -10; font-size: 0.8rem'>
+              <tr>
+                <td>공지사항</td>
+              </tr>
+              <tr>
+                <td colspan='3'><textarea class='setting notice' id='notice' style='width: 100%; height: 70px'></textarea></td>
+              </tr>
             </table>
           </div>
-        </div>
-
-        <div class="container-fluid text-gray-700" id='healthContent' style='display: none;'>
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">건강 관리</h1>
+          <div class="container-fluid text-gray-700" id='membersContent' style='display: none;'>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">멤버 관리</h1>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" style='table-layout: fixed; text-align: center' cellspacing="0">
+                <colgroup>
+                  <col width="150px" />
+                  <col width="110px" />
+                  <col width="110px" />
+                  <col width="110px" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>군번</th>
+                    <th>계급</th>
+                    <th>이름</th>
+                    <th>직책</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>군번</th>
+                    <th>계급</th>
+                    <th>이름</th>
+                    <th>직책</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </div>
-          
-        </div>
-          
-        <div class="container-fluid text-gray-700" id='boardContent' style='display: none;'>
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">그룹 게시판</h1>
+          <div class="container-fluid text-gray-700" id='healthContent' style='display: none;'>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">건강 관리</h1>
+            </div>
           </div>
-          
-        </div>
-
-        <div class="container-fluid text-gray-700" id='dashboardContent' style='display: block;'>
-         
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800" id='groupname'></h1>
+          <div class="container-fluid text-gray-700" id='boardContent' style='display: none;'>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">그룹 게시판</h1>
+            </div>
           </div>
-          
+          <div class="container-fluid text-gray-700" id='dashboardContent' style='display: block;'>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800" id='groupname'></h1>
+            </div>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
@@ -230,7 +194,6 @@
                 </div>
               </div>
             </div>
-          
             <div class="col-xl-8 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -258,68 +221,57 @@
                 </div>
               </div>
             </div>
-        </div>
-  
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; LUFT-AQUILA <script>document.write(new Date().getFullYear())</script></span>
           </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
-
+        <!-- End of Main Content -->
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>
+                Copyright &copy; LUFT-AQUILA <script>document.write(new Date().getFullYear())</script>
+              </span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
     </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>-->
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">로그아웃</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>-->
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">로그아웃</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">로그아웃합니다.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+            </button>
+          </div>
+          <div class="modal-body">로그아웃합니다.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  
-  <!-- Page level plugins -->
-  <script src="js/sb-admin-2.js"></script>
-  
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <script src='js/datatable-editor.js'></script>
-  <script src='/ajoumeow/Resources/Libraries/alertify/alertify.min.js'></script>
-  <script src='js/console.js'></script>
-
-</body>
-
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="js/sb-admin-2.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src='js/datatable-editor.js'></script>
+    <script src='/ajoumeow/Resources/Libraries/alertify/alertify.min.js'></script>
+    <script src='js/console.js'></script>
+  </body>
 </html>

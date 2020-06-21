@@ -127,3 +127,149 @@
 {"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 10:53:27"}
 {"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 10:53:43"}
 {"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 11:06:26"}
+{"ip":"192.168.0.1","url":"api/logout","level":"info","message":"Logout requested.","timestamp":"2020-06-21 11:08:25"}
+{"ip":"192.168.0.1","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-21 11:09:29"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"18","level":"info","message":"Logout requested.","timestamp":"2020-06-21 11:09:31"}
+{"ip":"192.168.0.1","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-21 11:14:38"}
+{"ip":"192.168.0.1","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-21 14:09:09"}
+{"ip":"192.168.0.1","url":"api/login","detail":"18","level":"info","message":"Login requested.","timestamp":"2020-06-21 14:11:32"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:19:21"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:21:02"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:21:05"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:21:09"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:21:13"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:21:50"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:23:48"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:24:00"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:24:02"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:25:05"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:38:43"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:38:46"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:40:19"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 14:58:16"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:00:42"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:00:43"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:04:43"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:06:09"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:14:15"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"18","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:14:30"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"18","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:24:07"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:35:07"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:35:25"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:36:17"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:37:14"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:38:53"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:39:47"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:39:52"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:41:25"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:41:51"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:42:03"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:42:58"}
+{"ip":"192.168.0.1","url":"/api/register","detail":"111","level":"info","message":"Admin registered.","timestamp":"2020-06-21 15:44:18"}
+{"ip":"192.168.0.1","url":"api/login","detail":"111","level":"info","message":"Login requested.","timestamp":"2020-06-21 15:44:24"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"111","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:44:48"}
+{"ip":"192.168.0.1","url":"/api/register","detail":"222","level":"info","message":"Member registered.","timestamp":"2020-06-21 15:45:16"}
+{"ip":"192.168.0.1","url":"api/login","detail":"222","level":"info","message":"Login requested.","timestamp":"2020-06-21 15:45:26"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"222","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:47:29"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:47:34"}
+{"ip":"192.168.0.1","url":"api/login","detail":"222","level":"info","message":"Login requested.","timestamp":"2020-06-21 15:47:38"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"222","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:47:55"}
+{"ip":"192.168.0.1","url":"/api/register","detail":"333","level":"info","message":"Member registered.","timestamp":"2020-06-21 15:48:19"}
+{"ip":"192.168.0.1","url":"api/login","detail":"333","level":"info","message":"Login requested.","timestamp":"2020-06-21 15:48:26"}
+{"ip":"192.168.0.1","url":"api/logout","detail":"333","level":"info","message":"Logout requested.","timestamp":"2020-06-21 15:48:34"}
+{"ip":"192.168.0.1","url":"api/login","detail":"222","level":"info","message":"Login requested.","timestamp":"2020-06-21 15:49:46"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:51:28"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:51:56"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:52:48"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:53:03"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:53:22"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:57:06"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:57:09"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:57:11"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 15:58:10"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:00:04"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:01:00"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:02:51"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:02:57"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:03:52"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:04:21"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:05:25"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:05:35"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:05:55"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:07:01"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:11:10"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:11:13"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:11:15"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:11:35"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:12:03"}
+{"ip":"192.168.0.1","url":"api/login","detail":"222","level":"info","message":"Login requested.","timestamp":"2020-06-21 16:18:43"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:21:51"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:22:11"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:23:40"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:24:23"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:25:00"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:25:15"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:25:27"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:26:31"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:27:44"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:28:20"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:28:22"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:29:13"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:29:26"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:29:34"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:29:38"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:30:01"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:30:32"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:30:57"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:31:57"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:38:28"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:38:44"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:39:34"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:41:29"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:43:42"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:44:35"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:44:38"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:46:02"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:48:59"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:49:12"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:49:38"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:50:05"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:51:33"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:52:31"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:52:54"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:54:03"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:54:54"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:56:33"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:57:08"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:57:19"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 16:57:38"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:01:53"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:02:07"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:02:14"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:02:19"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:02:31"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:02:46"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:04:04"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:04:18"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:04:56"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:05:27"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:07:30"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:07:41"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:21:02"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:21:18"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:21:30"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:22:17"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:24:33"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:24:59"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:25:57"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:27:19"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:31:31"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:31:56"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:32:14"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:32:42"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:34:14"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:34:25"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:34:52"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:35:07"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:35:40"}
+{"ip":"LOCALHOST","url":"SERVER","level":"info","message":"Server startup finished.","timestamp":"2020-06-21 17:43:46"}

@@ -28,11 +28,22 @@ i.icon {
   height: 100%;
   transform: rotate(-30deg);
 }
-
+/*
+#healthChart {
+  background-image: url(/mypage/chart.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+*/
 ol {
   padding: 0;
   margin: 0;
 }
+
+ol { text-align: center; }
+
+ol.odd { margin: -4.2rem 0px; }
 
 .hexagon {
   display: inline-block;
@@ -47,9 +58,6 @@ ol {
   border-right: solid 2px #000000;
 }
 
-ol { text-align: center; }
-
-ol.odd { margin: -4.2rem 0px; }
 
 .hexagon:before,
 .hexagon:after {

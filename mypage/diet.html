@@ -50,7 +50,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
-							<div id="colorlib-logo"><a href="index.html">밀알 Mil-All</a></div>
+							<div id="colorlib-logo"><a href="../">밀알 Mil-All</a></div>
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
@@ -99,7 +99,54 @@
               </ol>
               <div style='display: none; position: absolute; z-index: 10; top: 50%; left: 50%; margin-top: -8rem; margin-left: -11rem; width: 22rem; height: 15rem; border-radius: 50%; border: 3px solid black;'></div>
             </div>
-            
+            <div class="col-md-4 animate-box" style='margin-top: 7rem'>
+              <article>
+                <h2>식단</h2>
+                <div style='text-align: center; line-height: 3rem;'>
+                  <i class='dateMover fas fa-chevron-left' style='position: absolute; left: 5rem; font-size: 3.5rem'></i>
+                  <input id="date" class='' style='margin: 100 0;' type="date" value="" />
+                  <i class='dateMover fas fa-chevron-right' style='position: absolute; right: 5rem; font-size: 3.5rem'></i>
+                </div><br>
+                <table>
+                  <colgroup>
+                    <col width='30%'>
+                    <col width='70%'>
+                  </colgroup>
+                  <tr>
+                    <td>급양대</td>
+                    <td id='feeding'></td>
+                  </tr>
+                  <tr><td>&nbsp;</td><tr>
+                  <tr>
+                    <td>아침<br><span id='brst_cal'>0</span>kcal</td>
+                    <td id='brst'>로딩 중...</td>
+                  </tr>
+                  <tr><td>&nbsp;</td><tr>
+                  <tr>
+                    <td>점심<br><span id='lunc_cal'>0</span>kcal</td>
+                    <td id='lunc'>로딩 중...</td>
+                  </tr>
+                  <tr><td>&nbsp;</td><tr>
+                  <tr>
+                    <td>저녁<br><span id='dinr_cal'>0</span>kcal</td>
+                    <td id='dinr'>로딩 중...</td>
+                  </tr>
+                </table>
+              </article>
+            </div>
+            <div class="col-md-4 animate-box" style='margin-top: 7rem'>
+              <article>
+                <h2>칼로리 관리</h2>
+                <table>
+                  <colgroup>
+                    <col width='30%'>
+                    <col width='70%'>
+                  </colgroup>
+                  <tr>
+                    <td>
+                </table>
+              </article>
+            </div>
           </div>
 				</div>
 			</div>
@@ -169,5 +216,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src='../res/micromodal/micromodal.min.js'></script>
   <script src='../main.js'></script>
   <script src='mypage.js'></script>
+  <script src='diet.js'></script>
   </body>
 </html>

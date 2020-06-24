@@ -27,6 +27,9 @@ function medical() {
           datasets: datasets
         },
         options: {
+          legend: {
+            position: 'top'
+          },
           scales: {
             xAxes: [{
               type: 'time',

@@ -75,6 +75,7 @@ app.post('/api/login', async function(req, res) {
     if(!err) {
       try {
         if(hash == result.pw) {
+          if(!result.code) return alertify.error('로그인 처리 중에 문제가 발생했습니다. 다시 시도해 주세요');
           let query = "SELECT * FROM `" + result.code + "` WHERE `id`='" + ans.id + "';";
           let resp = await db.query(query);
           if(resp.length) {
@@ -206,6 +207,7 @@ app.post('/api/register', async function(req, res) {
               try {
                 let query = "CREATE TABLE `" + code + "_board` (" +
                     "`timestamp` TIMESTAMP," +
+                    "`count` INT PRIMARY KEY AUTO_INCREMENT NOT NULL," + 
                     "`id` VARCHAR(20)," +
                     "`subject` VARCHAR(50)," +
                     "`content` TEXT," +
@@ -304,6 +306,29 @@ app.post('/api/updateHealth', async function(req, res) {
   return res.send({ result: 'OK' });
 });
 
+app.post('/api/updateGroupSettings', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
+  try {
+    let query = "UPDATE `groups` SET `health`='" + req.body.health + "', `notice`='" + req.body.notice + "', `diet`='" + req.body.diet + "' WHERE `code`='" + req.session.code + "';";
+    let result = await db.query(query);
+    logger.info('Group setting updated.', { ip: ip, url: '/api/updateGroupSettings', detail: req.session.uid });
+    return res.send({ result: 'OK' });
+  } catch(e) {
+    logger.error('Group setting update failed.', { ip: ip, url: '/api/updateGroupSettings', result: e.toString(), detail: req.session.uid });
+  }
+});
+
+app.post('/api/updateMemberInfo', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
+  try {
+    let query = "UPDATE `" + req.session.code + "` SET `" + req.body.key + "`='" + req.body.value + "' WHERE `id`='" + req.body.uid + "';";
+    let result = await db.query(query);
+    logger.info('Member setting updated.', { ip: ip, url: '/api/updateMemberInfo', detail: req.session.uid });
+    return res.send({ result: 'OK' });
+  } catch(e) {
+    logger.error('Member setting update failed.', { ip: ip, url: '/api/updateGroupSettings', result: e.toString(), detail: req.session.uid });
+  }
+});
 
 app.listen(3110, async function() {
   db = await pool.getConnection();

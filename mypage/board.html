@@ -100,21 +100,15 @@
               </ol>
               <div style='display: none; position: absolute; z-index: 10; top: 50%; left: 50%; margin-top: -8rem; margin-left: -11rem; width: 22rem; height: 15rem; border-radius: 50%; border: 3px solid black;'></div>
             </div>
-            <div class="table-responsive" style='margin-top: 7rem; border: none;'>
-              <table class="table table-bordered" id="board" width="100%" style='table-layout: fixed;' cellspacing="0">
-                <colgroup>
-                  <col width="10%" />
-                  <col width="90%" />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>제목</th>
-                  </tr>
-                </thead>
-              </table>
+            <div id='article' style='margin-top: 7rem'>
+              <h3 id='subject'></h3>
+              작성일 : <span id='timestamp'></span><br>
+              작성자 : <span id='writer'></span><br>
+              <span id='content'></span><br><br>
+              <div id='replies'></div><br>
+              <textarea id='reply' placeholder='답글' style='width: 100%; height: 6rem'></textarea>
+              <span class="btn btn-primary" onclick='commitReply();' style='border-radius: 15px; font-size: 1.6rem; float: right'><i class='fas fa-comment-alt'></i> 답글 쓰기</span>
             </div>
-            <span class="btn btn-primary" style='border-radius: 15px; font-size: 1.6rem; float: right' onclick='MicroModal.show("write");'><i class='fas fa-pen'></i> 글쓰기</span>
           </div>
 				</div>
 			</div>
@@ -204,5 +198,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src='../main.js'></script>
   <script src='mypage.js'></script>
   <script src='communication.js'></script>
+  <script>$(function() { loadArticle(); });</script>
   </body>
 </html>

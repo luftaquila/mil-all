@@ -7,7 +7,7 @@ $(function() {
         if(res.result == 'true' && res.detail != 'member') location.href = '/console';
         else if(res.result == 'false') location.href = '/login.html';
         else {
-          
+          session = res.session;
         }
       }
     }

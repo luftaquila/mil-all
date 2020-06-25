@@ -166,5 +166,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.dataTables_filter input { width: 250px!important }
+
 
 

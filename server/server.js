@@ -207,7 +207,8 @@ app.post('/api/register', async function(req, res) {
               try {
                 let query = "CREATE TABLE `" + code + "_board` (" +
                     "`timestamp` TIMESTAMP," +
-                    "`count` INT PRIMARY KEY AUTO_INCREMENT NOT NULL," + 
+                    "`count` INT PRIMARY KEY AUTO_INCREMENT NOT NULL," +
+                    "`anonymous` TINYINT(1) DEFAULT 0," +
                     "`id` VARCHAR(20)," +
                     "`subject` VARCHAR(50)," +
                     "`content` TEXT," +
@@ -327,6 +328,64 @@ app.post('/api/updateMemberInfo', async function(req, res) {
     return res.send({ result: 'OK' });
   } catch(e) {
     logger.error('Member setting update failed.', { ip: ip, url: '/api/updateGroupSettings', result: e.toString(), detail: req.session.uid });
+  }
+});
+
+app.post('/api/requestBoard', async function(req, res) {
+  let query = "SELECT `count`, `subject` FROM `" + req.session.code + "_board`;";
+  let result = await db.query(query);
+  return res.send(result);
+});
+
+app.post('/api/commitArticle', async function(req, res) {
+  const ip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
+  try {
+    if(!req.body.subject || !req.body.article) return res.send({ result: "제목과 내용을 모두 입력해 주세요."});
+    let subject = req.body.subject.replace(/\"/g, '\\"').replace(/`/g, "'").replace(/\'/g, "\\'");
+    let article = req.body.article.replace(/\"/g, '\\"').replace(/`/g, "'").replace(/\'/g, "\\'");
+    let query = "INSERT INTO `" + req.session.code + "_board`(`anonymous`, `id`, `subject`, `content`) VALUES(" + 
+        (req.body.anonymous == 'true' ? '1' : '0') + ", '" + req.session.uid + "', '" + subject + "', '" + article + "');";
+    let result = await db.query(query);
+    logger.info('Article posted.', { ip: ip, url: '/api/commitArticle', detail: req.session.uid });
+    return res.send({ result: 'OK' });
+  } catch(e) {
+    logger.error('Article post failed.', { ip: ip, url: '/api/commitArticle', result: e.toString(), detail: req.session.uid });
+  }
+});
+
+app.post('/api/commitReply', async function(req, res) {
+  if(!req.body.reply) return res.send({ result: '답글을 입력해 주세요' });
+  let content = req.body.reply.replace(/\"/g, '\\"').replace(/`/g, "'").replace(/\'/g, "\\'");
+  let query = "SELECT `reply` FROM `" + req.session.code + "_board` WHERE `count`=" + req.body.count + ";";
+  let result = await db.query(query);
+  if(result.length) {
+    let reply = result[0].reply ? JSON.parse(result[0].reply) : [];
+    reply.push({
+      timestamp: new Date(),
+      id: req.session.uid,
+      writer: req.session.rank + ' ' + req.session.name,
+      content: content
+    });
+    query = "UPDATE `" + req.session.code + "_board` SET `reply`='" + JSON.stringify(reply) + "' WHERE `count`=" + req.body.count + ";";
+    result = await db.query(query);
+    return res.send({ result: 'OK' });
+  }
+});
+
+app.post('/api/loadArticle', async function(req, res) {
+  let query = "SELECT * FROM `" + req.session.code + "_board` WHERE `count`=" + req.body.count + ";";
+  let result = await db.query(query);
+  if(!result.length) return res.send({ result: "존재하지 않는 게시물입니다." });
+  return res.send({
+    result: 'OK',
+    timestamp: result[0].timestamp,
+    writer: result[0].anonymous ? '익명' : formatWriter(await db.query("SELECT `name`, `rank` FROM `" + req.session.code + "` WHERE id='" + result[0].id + "';")),
+    subject: result[0].subject,
+    content: result[0].content,
+    reply: result[0].reply
+  });
+  function formatWriter(result) {
+    return result[0].rank + ' ' + result[0].name;
   }
 });
 

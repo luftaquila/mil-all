@@ -44,6 +44,7 @@ function diet() {
       dinr_cal: 0,
       sum_cal: 0
     }
+    $('table span').text('0');
     for(let obj of dietMenu['DS_TB_MNDT_DATEBYMLSVC_' + group.diet].row) {
       if(obj.dates == new Date($('#date').val()).format('yyyymmdd')) {
         flag = true;
@@ -67,6 +68,13 @@ function diet() {
       }
       else if(flag && obj.dates) break;
     }
+    let health = JSON.parse(person.health);
+    let target = health.find(o => o.date == new Date($('#date').val()).format('yyyy-mm-dd'));
+    if(target) {
+      if(target.calorie) $('#add_cal').text(Math.round(target.calorie * 100) / 100);
+      let exercise = (target['3km'] ? target['3km'] : 0) / 60 * 14 + ((target.pushup ? target.pushup : 0) + (target.pullup ? target.pullup : 0)) / 3 + (target.bench ? 98 : 0) + (target.lift ? 98 : 0) + (target.squat ? 86 : 0);
+      $('#exe_cal').text(Math.round(exercise * 100) / 100);
+    }
     $('#feeding').text(isNaN(group.diet) ? '육군훈련소' : group.diet + '부대');
     $('#brst').text(menu.brst);
     $('#lunc').text(menu.lunc);
@@ -74,5 +82,13 @@ function diet() {
     $('#brst_cal').text(Math.round(menu.brst_cal * 100) / 100);
     $('#lunc_cal').text(Math.round(menu.lunc_cal * 100) / 100);
     $('#dinr_cal').text(Math.round(menu.dinr_cal * 100) / 100);
+    $('#sum_cal').text(Math.round(menu.sum_cal * 100) / 100);
+    $('#init_cal').text(Math.round((person.age * 3.87 + 1631.25) * 100) / 100);
+    $('#act_cal').text('1200');
+    
+    let total = Number($('#sum_cal').text()) + Number($('#add_cal').text()) - Number($('#init_cal').text()) - Number($('#exe_cal').text()) - 1200;
+    $('#tot_cal').text(Math.round(total * 100) / 100);
   });
 }
+
+

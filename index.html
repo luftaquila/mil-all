@@ -261,7 +261,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
       type: 'POST',
       success: function(res) {
         if(res.result) {
-          if(res.result == "true") $('#toLogin a').text('Mypage');
+          if(res.result == "true") $('#toLogin').html("<a onclick='$.ajax({ url: 'https://mil-all.luftaquila.io/api/logout', type: 'POST', success: function(res) { location.reload(); } });'>Logout</a>");
         }
       }
     });

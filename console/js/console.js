@@ -1,5 +1,5 @@
 $(function() {
-  //(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+  (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
   init();
   eventListener();
 });
@@ -40,7 +40,6 @@ function init() {
         $('input#lift').val(health.lift);
         $('input#squat').val(health.squat);
       }
-      
       $.ajax({
         url: 'https://luftaquila.io/api/proxy?url=' + encodeURIComponent('http://openapi.mnd.go.kr/3935313636323230393330353732313532/json/DS_MND_MILPRSN_PHSTR_OFAPRV/1/5000'),
         dataType: "json",
@@ -75,6 +74,20 @@ function init() {
       { data: "rank" },
       { data: "name" },
       { data: "role" }
+    ]
+  });
+  board = $('#boardtable').DataTable({
+    pagingType: "numbers",
+    ajax: {
+      url: 'https://mil-all.luftaquila.io/api/requestBoard',
+      type: 'POST',
+      dataSrc: ''
+    },
+    order: [[ 0, 'desc']],
+    //initComplete: function(set, res) { memberData = res; },
+    columns: [
+      { data: "count", orderable: false },
+      { data: "subject", orderable: false }
     ]
   });
   $.ajax({
@@ -300,7 +313,84 @@ function eventListener() {
       success: function(res) { if(res.result) { if(res.result == 'OK' ) { alertify.success('직책이 변경되었습니다.'); membertable.ajax.reload(); } } }
     });
   });
+  $('#boardtable tbody').on('click', 'tr', function () {
+    let data = board.row( this ).data();
+    $('#read-replies').html('');
+    loadArticle(data.count);
+  });
 }
+
+function commitArticle() {
+  let subject = $('#subject').val();
+  let article = $('#article').val();
+  let anonymous = $('#anonymous').is(':checked');
+  $.ajax({
+    url: '/api/commitArticle',
+    type: 'POST',
+    data: {
+      subject: subject,
+      article: article,
+      anonymous: anonymous
+    },
+    success: function(res) {
+      if(res.result) {
+        if(res.result == 'OK') {
+          alertify.success('게시물이 등록되었습니다.');
+          $('#subject').val('');
+          $('#article').val('');
+          MicroModal.close('write');
+          board.ajax.reload();
+        }
+        else alertify.error(res.result);
+      }
+    }
+  });
+}
+
+function commitReply() {
+  let count = $('#count').val();
+  $.ajax({
+    url: '/api/commitReply',
+    type: 'POST',
+    data: { reply: $('#reply').val(), count: count },
+    success: function(res) {
+      if(res.result) {
+        if(res.result == 'OK') { $('#reply').val(''); loadArticle(count); }
+        else alertify.error(res.result);
+      }
+    }
+  });
+}
+
+function loadArticle(count) {
+  $.ajax({
+    url: '/api/loadArticle',
+    type: 'POST',
+    data: { count: count },
+    success: function(article) {
+      if(article.result) {
+        if(article.result == 'OK') {
+          $('#count').val(count);
+          $('#read-subject').text(article.subject);
+          $('#read-timestamp').text(new Date(article.timestamp).format('yyyy-mm-dd HH:MM:ss'));
+          $('#read-writer').text(article.writer);
+          $('#read-content').text(article.content);
+          if(article.reply) {
+            let reply = JSON.parse(article.reply), html = '';
+            for(let obj of reply) {
+              html += "<span>&nbsp;&nbsp;↪&nbsp;" + new Date(obj.timestamp).format('yyyy-mm-dd HH:MM:ss') + ' ' + obj.writer + "</span>" +
+                '<br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + obj.content + '</span><br><br>';
+            }
+            $('#read-replies').html(html);
+          }
+          MicroModal.show('read');
+        }
+        else alertify.error(article.result);
+      }
+    }
+  });
+}
+
 
 let firstCall = true;
 let memberData = [];

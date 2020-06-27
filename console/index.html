@@ -166,7 +166,7 @@
               </tr>
               <tr>
                 <td width='100%'>오늘 식단표 미리보기</td>
-                <td id='dietdate'><script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate())</script></td>
+                <td id='dietdate'><script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1).toString().padStart(2, '0') + '-' + new Date().getDate())</script></td>
               </tr>
               <tr>
                 <td>아침</td>
@@ -180,7 +180,10 @@
                 <td>저녁</td>
                 <td id='dinner'></td>
               </tr>
-            </table>
+            </table><br>
+            <span style='font-size: 0.8rem'>
+              <i class='fas fa-check'></i> 급양대는 지휘관께서 위의 식단 미리보기 기능을 이용해 각 부대의 메뉴와 일치하는 급양대를 선택해 주시면 됩니다.<br>
+            </span>
           </div>
           <div class="container-fluid text-gray-700" id='membersContent' style='display: none;'>
             <!-- Page Heading -->
@@ -239,8 +242,24 @@
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">그룹 게시판</h1>
+              <div class="table-responsive" style='margin-top: 3rem; border: none;'>
+                <table class="table table-bordered" id="boardtable" width="100%" style='table-layout: fixed;' cellspacing="0">
+                  <colgroup>
+                    <col width="10%" />
+                    <col width="90%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>제목</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div><br>
+              <span class="btn btn-primary" style='border-radius: 15px; float: right' onclick='MicroModal.show("write");'><i class='fas fa-pen'></i> 글쓰기</span>
             </div>
           </div>
+          
           <div class="container-fluid text-gray-700" id='dashboardContent' style='display: block;'>
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -321,6 +340,40 @@
               <div class="chart-container" style="position: relative; width:100%; height: 80vw;">
                 <canvas id='healthChart'></canvas>
               </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="write" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="write-title" style="width: 90%">
+            <header class="modal__header">
+              <h2 class="modal__title" id="write-title" style="font-size: 1.8rem"><input id='subject' placeholder='제목' style='font-size: 1.2rem; width: 90%'></h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="write-content" style="text-align:center;">
+              <textarea id='article' placeholder='내용' style='width: 100%; height: 10rem'></textarea><br>
+              <label style='float: left'><input type='checkbox' id='anonymous'>&nbsp;익명</label>
+              <span class='btn btn-success' style='float: right' onclick='commitArticle();'>글쓰기</span>
+            </main>
+          </div>
+        </div>
+      </div>
+      <div class="modal micromodal-slide" id="read" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="read-title" style="width: 90%">
+            <header class="modal__header">
+              <h2 id='read-subject' class='modal__title'></h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="read-contentbox" style="text-align:center;">
+              <input type='hidden' id='count'>
+              작성일 : <span id='read-timestamp'></span><br>
+              작성자 : <span id='read-writer'></span><br><br>
+              <span id='read-content'></span><br><br>
+              <div id='read-replies'></div><br>
+              <textarea id='reply' placeholder='답글' style='width: 100%; height: 6rem'></textarea>
+              <span class="btn btn-primary" onclick='commitReply();' style='border-radius: 15px; float: right'><i class='fas fa-comment-alt'></i> 답글 쓰기</span>
             </main>
           </div>
         </div>

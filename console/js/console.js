@@ -74,7 +74,8 @@ function init() {
       { data: "rank" },
       { data: "name" },
       { data: "role" }
-    ]
+    ],
+    language: { "search" : "검색 : ", "lengthMenu" : "_MENU_ 개씩 보기", "info" : "_START_ - _END_ (총 _TOTAL_ 개 데이터)", "infoFiltered" : "(전체 _MAX_ 개 데이터 중 검색 결과)", "zeroRecords" : "검색 결과가 없습니다.",  "infoEmpty" : "0개 데이터" }
   });
   board = $('#boardtable').DataTable({
     pagingType: "numbers",
@@ -88,7 +89,8 @@ function init() {
     columns: [
       { data: "count", orderable: false },
       { data: "subject", orderable: false }
-    ]
+    ],
+    language: { "search" : "검색 : ", "lengthMenu" : "_MENU_ 개씩 보기", "info" : "_START_ - _END_ (총 _TOTAL_ 개 데이터)", "infoFiltered" : "(전체 _MAX_ 개 데이터 중 검색 결과)", "zeroRecords" : "검색 결과가 없습니다.",  "infoEmpty" : "0개 데이터" }
   });
   $.ajax({
     url: 'https://mil-all.luftaquila.io/res/diet.json',

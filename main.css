@@ -1,3 +1,4 @@
+/*body, html { font-family: 'NanumBarunGothic', sans-serif!important; }*/
 :focus { outline:none; }
 /*
 div.top-menu {
@@ -20,6 +21,15 @@ h4 {
   margin-bottom: 15px!important;
 }
 
+img.portrait {
+  position: absolute;
+  top: -3rem;
+  left: 0rem;
+  width: 100%;
+  transform: rotate(-30deg);
+
+}
+
 i.icon {
   margin-top: 0.7rem;
   margin-left: 0.5rem;
@@ -36,10 +46,14 @@ i.icon {
   background-position: center center;
 }
 */
-
-.healthAmount {
-  
+@media (max-width:320px) {
+  ol.odd { margin: -4.2rem -4rem!important; }
 }
+
+@media (min-width:321px) and (max-width:360px) {
+  ol.odd { margin: -4.2rem -2rem!important; }
+}
+
 
 ol {
   padding: 0;

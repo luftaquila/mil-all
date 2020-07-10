@@ -45,6 +45,7 @@ function diet() {
       sum_cal: 0
     }
     $('table span').text('0');
+    if(!dietMenu['DS_TB_MNDT_DATEBYMLSVC_' + group.diet]) return $('#feeding').text('급양대가 설정되지 않았습니다.');
     for(let obj of dietMenu['DS_TB_MNDT_DATEBYMLSVC_' + group.diet].row) {
       if(obj.dates == new Date($('#date').val()).format('yyyymmdd')) {
         flag = true;

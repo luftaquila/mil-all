@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <title>밀알 (Mil-ALl) 관리자 페이지</title>
     <!-- Custom fonts for this template-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
@@ -26,8 +27,8 @@
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style=''>
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../">
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-fighter-jet"></i>
+          <div class="sidebar-brand-icon">
+            <i class="fas fa-home"></i>
           </div>
           <div class="sidebar-brand-text mx-3">관리자 콘솔</div>
         </a>
@@ -118,16 +119,16 @@
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">설정</h1>
             </div>
-            <table id='settingArea' style='width: 100%; border-spacing: 7 10; margin-left: -5; margin-top: -10; font-size: 0.8rem'>
+            <table id='settingArea' style='width: 100%; border-spacing: 7 10; margin-left: -5; margin-top: -10; font-size: 1rem'>
               <colgroup>
-                <col width='30%'>
+                <col width='50%'>
                 <col width='50%'>
               </colgroup>
               <tr>
                 <td>공지사항</td>
               </tr>
               <tr>
-                <td colspan='3'><textarea class='setting notice' id='notice' style='width: 100%; height: 70px'></textarea></td>
+                <td colspan='2'><textarea class='setting notice' id='notice' style='width: 100%; height: 70px'></textarea></td>
               </tr>
               <tr><td>&nbsp;</td></tr>
               <tr>
@@ -226,7 +227,32 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">전염병</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">코로나-19</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+            <label class="control control--radio">최근 2주
+              <input type="radio" name="term" value='14' checked/>
+              <div class="control__indicator"></div>
+            </label>&nbsp;&nbsp;
+            <label class="control control--radio">최근 한달
+              <input type="radio" name="term" value='30'/>
+              <div class="control__indicator"></div>
+            </label>&nbsp;&nbsp;
+            <label class="control control--radio">전체 기간
+              <input type="radio" name="term" value='0'/>
+              <div class="control__indicator"></div>
+            </label>
+            <div style='width: 100%; height:300px'><canvas id='covidChart'></canvas></div><br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">군 내 전염병 감염 현황</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
@@ -237,13 +263,42 @@
                 </div>
               </div>
             </div>
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">주요 군 병원 정보</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body" style='overflow-x: scroll'>
+              <span id='locinfo'></span>
+              <table class="table table-bordered" id="hosp" style='width: 800px; table-layout: fixed;' cellspacing="0">
+                <colgroup>
+                  <col width='120px' />
+                  <col width='120px' />
+                  <col width='140px' />
+                  <col width='500px' />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>이름</th>
+                    <th>거리(km)</th>
+                    <th>전화번호</th>
+                    <th>주소</th>
+                  </tr>
+                </thead>
+              </table>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="container-fluid text-gray-700" id='boardContent' style='display: none;'>
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">그룹 게시판</h1>
+              <span class="btn btn-primary" style='border-radius: 15px; float: right' onclick='MicroModal.show("write");'><i class='fas fa-pen'></i> 글쓰기</span>
               <div class="table-responsive" style='margin-top: 3rem; border: none;'>
-                <table class="table table-bordered" id="boardtable" width="100%" style='table-layout: fixed;' cellspacing="0">
+                <br><table class="table table-bordered" id="boardtable" width="100%" style='table-layout: fixed;' cellspacing="0">
                   <colgroup>
                     <col width="10%" />
                     <col width="90%" />
@@ -256,7 +311,6 @@
                   </thead>
                 </table>
               </div><br>
-              <span class="btn btn-primary" style='border-radius: 15px; float: right' onclick='MicroModal.show("write");'><i class='fas fa-pen'></i> 글쓰기</span>
             </div>
           </div>
           
@@ -392,5 +446,6 @@
     <script src='/res/alertify/alertify.min.js'></script>
     <script src='/res/chart.js/Chart.bundle.min.js'></script>
     <script src='js/console.js'></script>
+    <script src='/mypage/medical.js'></script>
   </body>
 </html>

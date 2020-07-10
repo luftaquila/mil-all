@@ -70,16 +70,16 @@ function health() {
               }
               let ctg = [{
                 ctg: "3Km달리기",
-                max: 0,
-                min: 0
+                max: "12:30",
+                min: "15:37"
               }, {
                 ctg: "팔굽혀펴기(2분)",
-                max: 0,
-                min: 0
+                max: 72,
+                min: 47
               }, {
                 ctg: "윗몸일으키기(2분)",
-                max: 0,
-                min: 0
+                max: 86,
+                min: 61
               }, {
                 ctg: "벤치프레스",
                 max: 156,
@@ -171,6 +171,7 @@ function health() {
 }
 
 function healthPercentTranslator(data, ctg) {
+  if(!data) return { '3km': 0, pushup: 0, pullup: 0, bench: 0, lift: 0, squat: 0 }
   let returnData = {
     '3km': 100 * (data['3km'] - (ctg[0].max.split(':')[0] * 60 + ctg[0].max.split(':')[1] * 1)) / ((ctg[0].min.split(':')[0] * 60 + ctg[0].min.split(':')[1] * 1) - (ctg[0].max.split(':')[0] * 60 + ctg[0].max.split(':')[1] * 1)),
     pushup: 100 * (data.pushup - ctg[1].min) / (ctg[1].max - ctg[1].min),

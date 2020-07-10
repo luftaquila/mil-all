@@ -1,3 +1,7 @@
 a[disabled="disabled"] {
         pointer-events: none;
 }
+
+#settingArea input {
+  width: 100%;
+}

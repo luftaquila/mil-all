@@ -8,11 +8,33 @@ $(function() {
         else if(res.result == 'false') location.href = '/login.html';
         else {
           session = res.session;
+          $('#prop').html(session.rank + ' <span style="font-weight: bold;">' + session.name + '</span>');
+          if(session.group == '육군') {
+            $('div.overlay').css('background', '#1d6a36');
+            $('div.overlay').css('background', 'linear-gradient(135deg, #2e7b47 0%, #1d6a36 100%');
+            $('#portrait span').html('<img class="portrait" src="/images/army.png">');
+          }
+          else if(session.group == '해군') {
+            $('div.overlay').css('background', '#232583');
+            $('div.overlay').css('background', 'linear-gradient(135deg, #343694 0%, #232583 100%');
+            $('#portrait span').html('<img class="portrait" src="/images/navy.png">');
+          }
+          else if(session.group == '공군') {
+            $('div.overlay').css('background', '#5880c0');
+            $('div.overlay').css('background', 'linear-gradient(135deg, #6991d1 0%, #5880c0 100%');
+            $('#portrait span').html('<img class="portrait" src="/images/airforce.png">');
+          }
         }
       }
     }
   });
   event();
+  let loc = window.location.href.toString().split(window.location.host)[1].replace(/\//g, '');
+  if(loc != 'mypage') {
+    $('html, body').animate({
+      scrollTop: $("div#colorlib-contact").offset().top
+    }, 500);
+  }
 });
 
 function event() {

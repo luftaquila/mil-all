@@ -36,7 +36,7 @@ function health() {
               $('#saverecord').click(function() {
                 let data = {
                   date: $('#date').val(),
-                  '3km': $('table input#3km_min').val() * 60 + $('table input#3km_sec').val() * 1,
+                  '3km': $('table input#3km_min').val() * 60 + $('table input#3km_sec').val() * 1 || 5999,
                   pullup: Number($('table input#pullup').val()) || 0,
                   pushup: Number($('table input#pushup').val()) || 0,
                   bench: Number($('table input#bench').val()) || 0,

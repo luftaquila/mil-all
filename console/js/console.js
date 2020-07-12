@@ -1,5 +1,5 @@
 $(function() {
-  (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+  //(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
   init();
   eventListener();
 });
@@ -217,14 +217,24 @@ function eventListener() {
     else $('#memberDetail-role').attr('disabled', false);
     $('#memberDetail-sex').text(data.sex == 'M' ? '남성' : '여성');
     
-    let health = JSON.parse(data.health);
-    let maxRecord = {
-      '3km': Math.min.apply(Math, health.map(function(o) { return o['3km']; })),
-      pullup: Math.max.apply(Math, health.map(function(o) { return o.pullup; })),
-      pushup: Math.max.apply(Math, health.map(function(o) { return o.pushup; })),
-      bench: Math.max.apply(Math, health.map(function(o) { return o.bench; })),
-      lift: Math.max.apply(Math, health.map(function(o) { return o.lift; })),
-      squat: Math.max.apply(Math, health.map(function(o) { return o.squat; }))
+    let health = JSON.parse(data.health), maxRecord;
+    if(health) {
+      maxRecord = {
+        '3km': Math.min.apply(Math, health.map(function(o) { return o['3km']; })),
+        pullup: Math.max.apply(Math, health.map(function(o) { return o.pullup; })),
+        pushup: Math.max.apply(Math, health.map(function(o) { return o.pushup; })),
+        bench: Math.max.apply(Math, health.map(function(o) { return o.bench; })),
+        lift: Math.max.apply(Math, health.map(function(o) { return o.lift; })),
+        squat: Math.max.apply(Math, health.map(function(o) { return o.squat; }))
+      }
+    }
+    else maxRecord = {
+      '3km': '100:0',
+      pullup: 0,
+      pushup: 0,
+      bench: 0,
+      lift: 0,
+      squat: 0
     }
     let memberHealth = healthPercentTranslator(maxRecord, ctg);
     let chart = new Chart(document.getElementById("healthChart"), {
@@ -376,7 +386,7 @@ function loadArticle(count) {
           $('#read-subject').text(article.subject);
           $('#read-timestamp').text(new Date(article.timestamp).format('yyyy-mm-dd HH:MM:ss'));
           $('#read-writer').text(article.writer);
-          $('#read-content').text(article.content);
+          $('#read-content').html(article.content.replace(/\n/g, '<br>'));
           if(article.reply) {
             let reply = JSON.parse(article.reply), html = '';
             for(let obj of reply) {

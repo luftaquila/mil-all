@@ -43,12 +43,13 @@ function covidStat(term) {
               time: {
                 unit: 'day',
                 displayFormats: {
-                  day: 'YYYY/M/D'
+                  day: 'YYYY-MM-DD'
                 }
               },
               ticks: {
+                maxTicksLimit: 7,
                 min: 0
-              }
+              },
             }],
             yAxes: [{
               ticks: {
@@ -151,10 +152,11 @@ function medical() {
               time: {
                 unit: 'quarter',
                 displayFormats: {
-                  quarter: 'YYYY MMM'
+                  quarter: 'YYYY-MM'
                 }
               },
               ticks: {
+                maxTicksLimit: 9,
                 min: 0
               }
             }],

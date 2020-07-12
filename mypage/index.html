@@ -182,7 +182,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     url: '/api/myGroupInfo',
     type: 'POST',
     success: function(groupinfo) {
-      if(groupinfo[0].notice) $('#notice').text(groupinfo[0].notice);
+      if(groupinfo[0].notice) $('#notice').html(groupinfo[0].notice.replace(/\n/g, '<br>'));
     }
   });
   </script>

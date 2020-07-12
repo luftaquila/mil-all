@@ -78,7 +78,7 @@ function loadArticle() {
           $('#subject').text(article.subject);
           $('#timestamp').text(new Date(article.timestamp).format('yyyy-mm-dd HH:MM:ss'));
           $('#writer').text(article.writer);
-          $('#content').text(article.content);
+          $('#content').html(article.content.replace(/\n/g, '<br>'));
           if(article.reply) {
             let reply = JSON.parse(article.reply), html = '';
             for(let obj of reply) {

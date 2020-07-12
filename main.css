@@ -182,5 +182,6 @@ input:checked + .slider:before {
 }
 .dataTables_filter input { width: 250px!important }
 
+.btn:hover, .btn:focus, .btn.focus { color: #fff!important }
 
 

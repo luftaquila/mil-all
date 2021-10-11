@@ -20,7 +20,7 @@ let logger = new winston.createLogger({
   transports: [
     new winston.transports.File({
       level: 'info',
-      filename: '/home/luftaquila/HDD/mil-all/server/server.log',
+      filename: '/home/luftaquila/mil-all/server/server.log',
       maxsize: 10485760, // 10MB
       maxFiles: 1,
       showLevel: true,

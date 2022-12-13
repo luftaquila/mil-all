@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/luftaquila/mil-all#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-mysql-session": "^2.1.4",
     "express-session": "^1.17.1",
     "mariadb": "^2.4.0",
